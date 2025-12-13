@@ -1,29 +1,38 @@
-/* Placeholder untuk Variable dan Reset */
 :root {
-    --primary-color: #1a1a1a; /* Warna Teks Utama (Hitam) */
-    --secondary-color: #f0f0f0; /* Warna Hover/Background Ringan */
-    --border-color: #ccc;
+    --green-bottle: #00563F; /* Hijau Botol */
+    --white: #FFFFFF;
+    --light-grey: #f4f4f4;
+    --text-color: #333;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif; 
+    font-family: Arial, sans-serif;
 }
 
-/* --- 1. HEADER UTAMA --- */
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+}
 
+a {
+    text-decoration: none;
+    color: var(--white); /* Warna default link di header/footer */
+}
+
+/* --- 1. HEADER HIJAU BOTOL --- */
 .main-header {
+    background-color: var(--green-bottle);
+    color: var(--white);
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid var(--border-color);
-    background-color: #fff;
-    position: sticky; 
+    position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .logo-area {
@@ -31,89 +40,240 @@
     align-items: center;
 }
 
-/* --- 2. LOGO GAMBAR (.logo-image) --- */
-.logo-image img {
-    height: 30px; /* Ketinggian logo yang pas di header */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-link img {
+    height: 30px; /* Ukuran Logo */
     width: auto;
-    object-fit: contain;
 }
 
-/* --- 3. DROPDOWN KATEGORI (.category-dropdown-menu) --- */
-
-.category-dropdown-menu {
-    position: relative;
-    display: inline-block;
-    margin-left: 20px; 
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--white);
 }
 
-.dropdown-toggle {
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 8px 12px;
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.dropdown-toggle:hover {
-    background-color: var(--secondary-color);
-}
-
-.dropdown-content {
-    display: none; /* Sembunyikan secara default */
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: #fff;
-    min-width: 180px;
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
-    z-index: 1001;
-    border: 1px solid var(--border-color);
-    border-top: none;
-    padding: 5px 0;
-}
-
-.dropdown-content a {
-    color: var(--primary-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9em;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Class yang diaktifkan oleh JavaScript saat diklik */
-.category-dropdown-menu.active .dropdown-content {
-    display: block;
-}
-
-/* --- 4. IKON HEADER --- */
 .header-icons {
     display: flex;
-    gap: 15px;
-    align-items: center;
+    gap: 20px;
 }
 
 .icon, .menu-toggle {
-    color: var(--primary-color);
-    font-size: 1.2em;
-    text-decoration: none;
+    color: var(--white);
+    font-size: 1.3em;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px; 
 }
 
-/* --- 5. RESPONSIVE DESIGN (MOBILE) --- */
-@media (max-width: 767px) {
-    /* Sembunyikan Dropdown di mobile */
-    .category-dropdown-menu {
-        display: none;
-    }
+/* --- 2. SIDEBAR MENU (Header Button Content) --- */
+.sidebar {
+    height: 100%;
+    width: 0; /* Default: Tersembunyi */
+    position: fixed;
+    z-index: 101; 
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.sidebar.open {
+    width: 300px; /* Lebar saat terbuka */
+    padding: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.sidebar-section {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.sidebar-section h3 {
+    color: var(--green-bottle);
+    margin-bottom: 10px;
+}
+
+.sidebar-section a {
+    display: block;
+    padding: 8px 0;
+    color: var(--text-color);
+}
+
+.sidebar-section a i {
+    margin-right: 10px;
+    color: var(--green-bottle);
+}
+
+.search-section {
+    position: relative;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.search-section i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* --- 3. WELCOME SECTION --- */
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--white);
+}
+
+.bold-text {
+    font-weight: bold;
+    color: var(--green-bottle);
+    margin-top: 15px;
+}
+
+/* --- 4. SLIDER BANNER --- */
+.slider-section {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Untuk efek geser */
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%; /* Penting untuk Slider */
+}
+
+.slide img {
+    width: 100%;
+    height: 350px; /* Tinggi Slider (Bisa disesuaikan) */
+    object-fit: cover;
+}
+
+/* --- 5. GARIS PEMBATAS TEBAL HIJAU BOTOL --- */
+.divider {
+    height: 10px;
+    background-color: var(--green-bottle);
+    margin: 30px 0;
+}
+
+/* --- 6. PRODUK WANITA SECTION --- */
+.product-section {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--green-bottle);
+}
+
+.product-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-image-slider {
+    display: flex;
+    overflow-x: scroll; /* Menggeser horizontal di HP */
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.product-image-slider img {
+    min-width: 150px; /* Ukuran foto produk di slide */
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* --- 7. FOOTER CONTACT SECTION (Hijau Botol) --- */
+.footer-contact-section {
+    background-color: var(--green-bottle);
+    color: var(--white);
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-contact-section p {
+    margin-bottom: 20px;
+}
+
+.marketplace-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.marketplace-links img {
+    width: 40px;
+    height: 40px;
+    background-color: var(--white); /* Agar ikon marketplace terlihat jelas */
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.contact-info-footer a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.contact-info-footer i {
+    margin-right: 5px;
+}
+
+.copyright {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8em;
+}
+
+/* --- RESPONSIVE UNTUK DESKTOP (OPSIONAL) --- */
+@media (min-width: 768px) {
+    .main-header {
+        padding: 15px 50px;
+    }
+
+    .slide img {
+        height: 500px; /* Slider lebih tinggi di desktop */
+    }
+
+    .sidebar.open {
+        width: 350px;
+    }
+        }
