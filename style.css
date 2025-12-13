@@ -265,13 +265,13 @@ a {
 }
 
 /* --- RESPONSIVE UNTUK DESKTOP (OPSIONAL) --- */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .main-header {
         padding: 15px 50px;
     }
 
     .slide img {
-        height: 500px; /* Slider lebih tinggi di desktop */
+        height: 300px; /* Slider lebih tinggi di desktop */
     }
 
     .sidebar.open {
