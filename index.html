@@ -3,45 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko SANO - E-commerce</title>
-    
+    <title>SANO Store - Pakaian Premium Lokal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <header class="main-header">
         <div class="logo-area">
-            
-            <a href="#" class="logo-image">
-                <img src="images/sanologo.jpg" alt="SANO Store Logo">
+            <a href="#" class="logo-link">
+                <img src="images/sanologo.png" alt="SANO Store Logo">
+                <span class="logo-text">SANO</span>
             </a>
-            
-            <div class="category-dropdown-menu">
-                <button class="dropdown-toggle">
-                    SHOP BY CATEGORY <i class="fa-solid fa-angle-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="LINK_CELANA">Celana</a>
-                    <a href="LINK_BAJU">Baju</a>
-                    <a href="LINK_OUTERWEAR">Outerwear</a>
-                    <a href="LINK_AKSESORIS">Aksesoris</a>
-                </div>
-            </div>
-            
         </div>
-
+        
         <div class="header-icons">
-            <a href="#" class="icon search-toggle"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
             <a href="#" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
-            <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
-    <main>
-        <h1>Welcome to SANO</h1>
-        <p>Ganti konten ini dengan slider gambar lo nanti.</p>
+
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-section search-section">
+            <input type="text" placeholder="Cari Produk SANO...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="sidebar-section category-section">
+            <h3>Kategori</h3>
+            <a href="LINK_PRIA"><i class="fa-solid fa-person"></i> Pria</a>
+            <a href="LINK_WANITA"><i class="fa-solid fa-person-dress"></i> Wanita</a>
+        </div>
+        
+        <div class="sidebar-section contact-section">
+            <h3>Hubungi Kami</h3>
+            <a href="https://wa.me/6289604375335" target="_blank">
+                <i class="fa-brands fa-whatsapp icon-wa"></i> WA: 089604375335
+            </a>
+            <a href="https://www.instagram.com/sanostore25?igsh=MXc4eGVqYjRjZG5hag==" target="_blank">
+                <i class="fa-brands fa-instagram icon-ig"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@sanostore.id?_r=1&_t=ZS-92BfItUqJQ9" target="_blank">
+                <i class="fa-brands fa-tiktok icon-tiktok"></i> TikTok
+            </a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div> <main>
+        <section class="welcome-section">
+            <h1 class="bold-text">SELAMAT DATANG DI SANO STORE</h1>
+            <p>sano store menjual pakaian wanita dan pria berkualitas perimum. sano store penjual pakaian brand lokal.</p>
+            <h1 class="bold-text">SELAMAT BERBELANJA</h1>
+        </section>
+        
+        <section class="slider-section">
+            <div class="slide-container" id="mainSlider">
+                <div class="slide active">
+                    <img src="images/slide1.jpg" alt="Slide Promo 1">
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.jpg" alt="Slide Promo 2">
+                </div>
+            </div>
+            </section>
+
+        <div class="divider"></div>
+        
+        <section class="product-section">
+            <h2 class="bold-text">PRODUK WANITA</h2>
+            <p class="product-title">CELANA FLARE CUTBRAY</p>
+            
+            <div class="product-image-slider">
+                <img src="images/black.jpg" alt="Celana Cutbray Black">
+                <img src="images/grey.jpg" alt="Celana Cutbray Grey">
+                <img src="images/brown.jpg" alt="Celana Cutbray Brown">
+                <img src="images/brokenwhite.jpg" alt="Celana Cutbray Broken White">
+                <img src="images/cream.jpg" alt="Celana Cutbray Cream">
+                <img src="images/ivory.jpg" alt="Celana Cutbray Ivory">
+            </div>
+            </section>
+
+        <section class="footer-contact-section">
+            <p>Pembelian Bisa dilakukan di Marketplace dan Wa pada website ini.</p>
+            
+            <div class="marketplace-links">
+                <a href="https://shopee.co.id/sanostore25" target="_blank">
+                    <img src="images/shopee-icon.png" alt="Shopee">
+                </a>
+                <a href="https://vt.tiktok.com/ZSPSd39Vx/?page=Mall" target="_blank">
+                    <img src="images/tiktok-shop-icon.png" alt="Tiktok Shop">
+                </a>
+                </div>
+            
+            <div class="contact-info-footer">
+                 <a href="https://wa.me/6289604375335" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> 089604375335
+                </a>
+                <a href="https://www.instagram.com/sanostore25?igsh=MXc4eGVqYjRjZG5hag==" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 SANO Store. All Rights Reserved.
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
