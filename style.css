@@ -283,4 +283,36 @@ a {
   .slider-section {
     height: 300px; /* Lo bisa coba ganti angka ini: 250px atau 300px agar pendek */
   }
+} 
+
+    /* 1. Rata Kiri Konten Footer dan Atur Padding */
+/* Ganti .footer dengan class footer lo yang benar */
+.footer {
+  text-align: left; /* Ini yang membuat semua teks rata kiri */
+  padding: 30px 20px; /* Tambah padding agar tidak terlalu mepet ke kiri/kanan layar */
 }
+
+.footer p {
+  margin-bottom: 10px; /* Jarak antar baris teks */
+}
+
+/* 2. Styling Khusus untuk Ikon Marketplace (Shopee & TikTok) */
+.social-icons {
+  display: flex; /* Agar ikon berjejer horizontal */
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#shopee-icon, #tiktok-icon {
+  font-size: 30px; /* Perbesar ukuran ikon */
+  color: var(--white); /* Gunakan warna putih agar tidak ada dasar putih */
+  background: none; /* Pastikan tidak ada background */
+  padding: 0; /* Hapus padding yang membuat lingkaran putih */
+}
+
+/* 3. Styling Alamat Baru */
+.address-info {
+  margin-top: 20px;
+  font-size: 14px;
+} 
