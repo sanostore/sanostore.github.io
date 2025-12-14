@@ -19,7 +19,12 @@ body {
   font-family: 'Lora', serif;
   font-size: 16px; 
   line-height: 1.7; 
-}
+
+.logo-text { 
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  letter-spacing: 3px; 
+} 
 
 a {
     text-decoration: none;
