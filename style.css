@@ -18,7 +18,7 @@
 body {
     background-color: var(--white);
     color: var(--text-color);
-    font-family: var(--soft-font); /* Terapkan Font Lora */
+    font-family: var(--soft-font);
     line-height: 1.6;
 }
 
@@ -29,10 +29,10 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 20px; /* Atur indentasi list */
+    padding-left: 20px;
 }
 
-/* 1. HEADER STYLING (Hijau Botol, Tulisan Putih) */
+/* 1. HEADER STYLING */
 .main-header {
     background-color: var(--green-bottle);
     color: var(--white);
@@ -52,7 +52,7 @@ ul {
 }
 
 .logo-img {
-    height: 35px; /* Ukuran Logo Gambar */
+    height: 35px;
     margin-right: 8px;
 }
 
@@ -76,7 +76,7 @@ ul {
 }
 
 .flag-icon {
-    width: 30px; /* Ukuran Bendera */
+    width: 30px;
     height: 20px;
     object-fit: cover;
     display: block;
@@ -166,7 +166,7 @@ ul {
 /* 2. PEMISAH GARIS TEBAL HIJAU BOTOL */
 .separator-line {
     border: none;
-    border-top: 4px solid var(--green-bottle); /* Garis Tebal */
+    border-top: 4px solid var(--green-bottle); 
     margin: 0;
     padding: 0;
 }
@@ -180,7 +180,7 @@ ul {
 
 .welcome-title {
     font-family: var(--soft-font);
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     font-size: 1.6em;
     margin-bottom: 10px;
 }
@@ -190,10 +190,9 @@ ul {
     color: var(--text-color);
 }
 
-/* 4. SLIDER BANNER (Mobile Friendly) */
+/* 4. SLIDER BANNER */
 .slider-section {
     overflow: hidden;
-    /* Atur tinggi slider agar proporsional di HP */
     max-height: 250px; 
 }
 
@@ -205,7 +204,7 @@ ul {
 .slide {
     width: 100%;
     height: 250px; 
-    object-fit: cover; /* Penting agar gambar tidak terdistorsi */
+    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -255,7 +254,7 @@ ul {
 }
 
 .product-text-details p, .product-text-details ul {
-    text-align: left; /* Rata Kiri */
+    text-align: left; 
     margin-bottom: 5px;
     font-size: 0.95em;
 }
@@ -296,7 +295,7 @@ ul {
     background-color: var(--green-bottle);
     color: var(--white);
     padding: 25px 20px;
-    text-align: left; /* Rata Kiri Total Footer */
+    text-align: left; 
 }
 
 /* Ikon Marketplace */
@@ -307,10 +306,10 @@ ul {
 }
 
 .marketplace-icon {
-    width: 130px; /* Ukuran Ikon Marketplace (Lumayan Besar) */
+    width: 130px; 
     height: auto;
     display: block;
-    background: none; /* Pastikan tidak ada background putih */
+    background: none;
 }
 
 .footer-note {
@@ -337,3 +336,104 @@ ul {
     margin-top: 10px;
     font-size: 0.8em;
 }
+
+/* Styling Khusus Halaman Detail Produk */
+.detail-main-content {
+    padding: 20px;
+}
+.detail-product-title {
+    text-align: center;
+    color: var(--green-bottle);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+.detail-main-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.product-details-box {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+.quick-buy-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.buy-button {
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px;
+    color: var(--white);
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.buy-button i {
+    margin-right: 5px;
+}
+.shopee {
+    background-color: #ff5722; 
+}
+.tiktok {
+    background-color: #000000;
+}
+.whatsapp {
+    background-color: #25D366;
+}
+
+
+/* MEDIA QUERY untuk Desktop/Tablet */
+@media (min-width: 768px) {
+    .main-header { padding: 15px 40px; }
+    .header-content { max-width: 1200px; margin: 0 auto; }
+    .menu-toggle { display: none; }
+    .main-nav {
+        display: flex;
+        position: static;
+        width: auto;
+        border-top: none;
+        background: none;
+        color: var(--white);
+        margin-left: auto;
+        gap: 20px;
+        align-items: center;
+        padding: 0;
+    }
+    .main-nav .search-box input { margin-bottom: 0; background-color: rgba(255, 255, 255, 0.1); color: var(--white); border-color: var(--white); }
+    .category-links p, .contact-info-menu p { display: none; }
+    .category-links a, .contact-info-menu a { display: inline-block; padding: 0; margin-right: 15px; font-size: 0.9em; }
+    
+    .product-details-container {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .product-text-details { flex: 2; }
+    .size-guide-img { flex: 1; max-width: 350px; }
+    
+    .detail-product-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .detail-main-img {
+        width: 45%;
+    }
+    .product-details-box {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    .quick-buy-links {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    } 
