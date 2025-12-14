@@ -3,126 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANO STORE - Pakaian Premium Lokal</title>
+    <title>SANO STORE - Pakaian Premium Wanita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-   
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="logo-area">
-            <a href="#" class="logo-link">
-                <img src="sanonewlogo.png" alt="SANO Store Logo">
-                <span class="logo-text">SANO</span>
-            </a>
+        <div class="header-content">
+            <div class="logo-area">
+                <a href="./">
+                    <img src="sanonewlogo.png" alt="SANO Logo" class="logo-img">
+                    <span class="logo-text">SANO</span>
+                </a>
+            </div>
+            
+            <div class="header-icons">
+                <a href="en/index.html" title="Switch to English">
+                    <img src="english.png" alt="English Flag" class="flag-icon">
+                </a>
+
+                <div class="cart-dropdown-container">
+                    <i class="fas fa-shopping-cart cart-icon" id="cartToggle"></i>
+                    <div class="cart-dropdown-menu" id="cartMenu">
+                        <a href="https://shopee.co.id/sanostore25" target="_blank">Shopee</a>
+                        <a href="https://vt.tiktok.com/ZSPSd39Vx/?page=Mall" target="_blank">TikTok Shop</a>
+                        <a href="https://wa.me/6289604375335" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        
-        <div class="header-icons">
-            <a href="#" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
+
+        <nav class="main-nav" id="mainNav">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari warna produk: grey, brown, brokenwhite...">
+            </div>
+            
+            <div class="category-links">
+                <p>Kategori:</p>
+                <a href="celana.html">Celana Wanita</a>
+                <a href="baju.html">Baju Wanita <span class="soon">(Cooming Soon!)</span></a>
+            </div>
+
+            <div class="contact-info-menu">
+                <p>Contact Info:</p>
+                <a href="https://wa.me/6289604375335" target="_blank"><i class="fab fa-whatsapp"></i> WA: 089604375335</a>
+                <a href="https://www.instagram.com/sanostore25?igsh=MXc4eGVqYjRjZG5hag==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@sanostore.id?_r=1&_t=ZS-92BfItUqJQ9" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+        </nav>
     </header>
 
-    <div class="sidebar" id="sidebarMenu">
-        <div class="sidebar-section search-section">
-            <input type="text" placeholder="Cari Produk SANO...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+    <hr class="separator-line">
 
-        <div class="sidebar-section category-section">
-            <h3>Kategori</h3> 
-            <a href="LINK_WANITA"><i class="fa-solid fa-person-dress"></i> Wanita</a>
-        </div>
-        
-        <div class="sidebar-section contact-section">
-            <h3>Hubungi Kami</h3>
-            <a href="https://wa.me/6289604375335" target="_blank">
-                <i class="fa-brands fa-whatsapp icon-wa"></i> Whatsapp
-            </a>
-            <a href="https://www.instagram.com/sanostore25?igsh=MXc4eGVqYjRjZG5hag==" target="_blank">
-                <i class="fa-brands fa-instagram icon-ig"></i> Instagram
-            </a>
-            <a href="https://www.tiktok.com/@sanostore.id?_r=1&_t=ZS-92BfItUqJQ9" target="_blank">
-                <i class="fa-brands fa-tiktok icon-tiktok"></i> TikTok
-            </a>
-        </div>
-    </div>
-    <div class="overlay" id="overlay"></div> <main>
+    <main>
         <section class="welcome-section">
-            <h1 class="bold-text">SELAMAT DATANG DI SANO STORE</h1>
-            <p>sano merk lokal, menjual pakaian premium wanita</p>
-            <h1 class="bold-text">SELAMAT BERBELANJA</h1>
+            <h2 class="welcome-title">SELAMAT DATANG DI SANO STORE</h2>
+            <p class="welcome-description">SANO Store **brand lokal**. Menjual pakaian premium wanita, berdiri sejak tahun 2025.</p>
         </section>
-        
+
         <section class="slider-section">
-            <div class="slide-container" id="mainSlider">
-                <div class="slide active">
-                    <img src="slide1.jpg" alt="Slide Promo 1">
-                </div>
-                <div class="slide">
-                    <img src="slide2.jpg" alt="Slide Promo 2">
-                </div>
-            </div> 
-            </section>
-
-        <div class="divider"></div>
-        
-        <section class="product-section">
-            <h2 class="bold-text">PRODUK WANITA</h2>
-            <p class="product-title">CELANA FLARE CUTBRAY</p>
-            
-            <div class="product-image-slider">
-                <img src="black.jpg" alt="Celana Cutbray Black">
-                <img src="grey.jpg" alt="Celana Cutbray Grey">
-                <img src="brown.jpg" alt="Celana Cutbray Brown">
-                <img src="brokenwhite.jpg" alt="Celana Cutbray Broken White">
-                <img src="cream.jpg" alt="Celana Cutbray Cream">
-                <img src="ivory.jpg" alt="Celana Cutbray Ivory">
-            </div>
-            </section>
-
-        <section class="footer-contact-section">
-            <p>Pembelian bisa dilakukan di Marketplace dan Whatsapp pada website ini.</p>
-            
-            <div class="marketplace-links">
-                <a href="https://shopee.co.id/sanostore25" target="_blank">
-                    <img src="shopee.png" alt="Shopee">
-                </a>
-                <a href="https://vt.tiktok.com/ZSPSd39Vx/?page=Mall" target="_blank">
-                    <img src="tiktokshop.png" alt="Tiktok Shop">
-                </a>
-                </div>
-            
-            <div class="contact-info-footer">
-                 <a href="https://wa.me/6289604375335" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
-                </a>
-                <a href="https://www.instagram.com/sanostore25?igsh=MXc4eGVqYjRjZG5hag==" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a> 
-
-                <div class="address-info">
-    <p>JL. Cempaka No 35</p>
-    <p>Petukangan RT.02 RW.01</p>
-    <p>Wiradesa, Pekalongan</p>
-    <p>Jawa Tengah, Indonesia</p> 
-                    
-            </div>
-            
-            <div class="copyright">
-                &copy; 2025 SANO STORE. All Rights Reserved.
+            <div class="slide-container" id="imageSlider">
+                <img src="slide1.jpg" class="slide" alt="Banner Slide 1">
+                <img src="slide2.jpg" class="slide" alt="Banner Slide 2">
             </div>
         </section>
+
+        <hr class="separator-line">
+
+        <section class="product-section">
+            <h3 class="product-header">PRODUK CELANA</h3>
+            <h4 class="product-subtitle">Celana Flare Cutbray</h4>
+            
+            <div class="product-image-slider" id="productSlider">
+                <a href="product-detail.html?color=black" class="product-link"><img src="black.jpg" alt="black"></a>
+                <a href="product-detail.html?color=grey" class="product-link"><img src="grey.jpg" alt="grey"></a>
+                <a href="product-detail.html?color=brown" class="product-link"><img src="brown.jpg" alt="brown"></a>
+                <a href="product-detail.html?color=brokenwhite" class="product-link"><img src="brokenwhite.jpg" alt="brokenwhite"></a>
+                <a href="product-detail.html?color=cream" class="product-link"><img src="cream.jpg" alt="cream"></a>
+                <a href="product-detail.html?color=ivory" class="product-link"><img src="ivory.jpg" alt="ivory"></a>
+            </div>
+
+            <div class="product-details-container">
+                <div class="product-text-details">
+                    <p><strong>Nama Produk</strong> : Celana Flare (Celana Cutbray)</p>
+                    <p><strong>Bahan</strong> : Scuba Premium</p>
+                    <p>Pinggang full karet (tanpa jahitan)</p>
+                    <p>Tersedia ukuran M, XL dan XXL</p>
+                    <p>Toleransi ukuran -+ 2Cm</p>
+                    
+                    <p class="size-detail"><strong>Size M, XL</strong> (bb 40-60 kg):</p>
+                    <ul>
+                        <li>Panjang celana -+ 105</li>
+                        <li>Lingkar paha -+ 54-65</li>
+                    </ul>
+                    
+                    <p class="size-detail"><strong>Size XXL</strong> (bb 60-80kg):</p>
+                    <ul>
+                        <li>Panjang celana -+ 105</li>
+                        <li>Lingkar paha -+ 70</li>
+                    </ul>
+
+                    <p class="tagline">Celana Flare (Cutbray) nyaman dipakai disetiap aktivitasmu.</p>
+                    <p class="tagline-quote">" Pakaianmu Karaktermu "</p>
+                    <p>Selamat Berbelanja</p>
+                </div>
+
+                <h4 class="size-guide-title">Panduan Ukuran</h4>
+                <img src="panduan.jpg" alt="Panduan Ukuran" class="size-guide-img">
+            </div>
+        </section>
+        
+        <hr class="separator-line">
+        
     </main>
+
+    <footer class="main-footer">
+        
+        <div class="marketplace-links">
+            <a href="https://shopee.co.id/sanostore25" target="_blank" title="Shopee SANO Store">
+                <img src="shopee.png" alt="Shopee Link" class="marketplace-icon">
+            </a>
+            <a href="https://vt.tiktok.com/ZSPSd39Vx/?page=Mall" target="_blank" title="TikTok Shop SANO Store">
+                <img src="tiktokshop.png" alt="Tiktok Shop Link" class="marketplace-icon">
+            </a>
+        </div>
+        
+        <p class="footer-note">Pembelian Bisa dilakukan di Marketplace dan Whatsapp pada website ini.</p>
+
+        <div class="footer-contact">
+            <p><strong>Contact Info</strong></p>
+            <p><i class="fab fa-whatsapp"></i> WA: 089604375335</p>
+            <p><i class="fab fa-instagram"></i> IG: sanostore25</p>
+        </div>
+
+        <div class="footer-address">
+            <p><strong>Alamat</strong></p>
+            <p>JL Cempaka No. 35</p>
+            <p>Petukangan RT. 02 RW.01</p>
+            <p>Wiradesa, Pekalongan</p>
+            <p>Jawa Tengah, Indonesia</p>
+        </div>
+        
+        <div class="copyright-text">
+            &copy; 2025 SANO STORE. All Rights Reserved.
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
