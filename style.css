@@ -435,5 +435,29 @@ ul {
         width: 100%;
         flex-direction: row;
         justify-content: center;
-    }
     } 
+    } 
+
+/* Ikon Support Payment (Di Footer) */
+.support-payment-icons {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+.support-payment-icons p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.support-payment-icons img {
+    height: 28px; /* Ukuran Ikon untuk Mandiri, BNI, BRI, USDT, USDC */
+    width: auto;
+    margin-right: 15px;
+    background-color: var(--white); 
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+} 
