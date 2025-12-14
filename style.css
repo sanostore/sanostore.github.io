@@ -270,25 +270,8 @@ a {
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 0.8em;
-}
+} 
 
-/* --- RESPONSIVE UNTUK DESKTOP (OPSIONAL) --- */
-@media (min-width: 600px) {
-    .main-header {
-        padding: 15px 50px;
-    }
-
-    .slide img {
-        height: 300px; /* Slider lebih tinggi di desktop */
-    }
-
-    .sidebar.open {
-        width: 350px;
-
-    } 
-        }
-
-    /* Aturan default untuk desktop */
 .slider-section {
   height: 500px; /* Atur tinggi default di sini. Sesuaikan jika di HTML lo berbeda */
   width: 100%;
