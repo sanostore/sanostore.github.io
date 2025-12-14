@@ -1,325 +1,339 @@
+/* Custom Variables */
 :root {
-    --green-bottle: #00563F; /* Hijau Botol */
+    --green-bottle: #00563F; 
     --white: #FFFFFF;
     --light-grey: #f4f4f4;
     --text-color: #333;
+    --soft-font: 'Lora', serif; /* Font Lembut */
+    --default-font: Arial, sans-serif;
 }
 
+/* Global Reset & Font Setting */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lora', serif ; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*
 body {
-  background-color: var(--white);
-  color: var(--text-color);
-  font-family: 'Lora', serif;
-  font-size: 16px; 
-  line-height: 1.7; 
-
-.logo-text { 
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  letter-spacing: 3px; 
-} 
+    background-color: var(--white);
+    color: var(--text-color);
+    font-family: var(--soft-font); /* Terapkan Font Lora */
+    line-height: 1.6;
+}
 
 a {
     text-decoration: none;
-    color: var(--white); /* Warna default link di header/footer */
+    color: inherit;
 }
 
-/* --- 1. HEADER HIJAU BOTOL --- */
+ul {
+    list-style: none;
+    padding-left: 20px; /* Atur indentasi list */
+}
+
+/* 1. HEADER STYLING (Hijau Botol, Tulisan Putih) */
 .main-header {
     background-color: var(--green-bottle);
     color: var(--white);
-    padding: 15px 20px;
+    padding: 10px 20px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-.logo-area {
+.logo-area a {
     display: flex;
     align-items: center;
+    color: var(--white);
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo-link img {
-    height: 30px; /* Ukuran Logo */
-    width: auto;
+.logo-img {
+    height: 35px; /* Ukuran Logo Gambar */
+    margin-right: 8px;
 }
 
 .logo-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--white);
+    font-family: var(--soft-font);
+    font-size: 1.7em;
+    font-weight: 700; 
 }
 
+/* Icons and Menu Toggle */
 .header-icons {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
 }
 
-.icon, .menu-toggle {
-    color: var(--white);
-    font-size: 1.3em;
+.cart-icon, .menu-toggle {
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.flag-icon {
+    width: 30px; /* Ukuran Bendera */
+    height: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-toggle {
     background: none;
     border: none;
-    cursor: pointer;
+    color: var(--white);
 }
 
-/* --- 2. SIDEBAR MENU (Header Button Content) --- */
-.sidebar {
-    height: 100%;
-    width: 0; /* Default: Tersembunyi */
-    position: fixed;
-    z-index: 101; 
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+/* Keranjang Dropdown Styling */
+.cart-dropdown-container {
+    position: relative;
+    display: inline-block;
 }
 
-.sidebar.open {
-    width: 300px; /* Lebar saat terbuka */
-    padding: 20px;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
+.cart-dropdown-menu {
     display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.sidebar-section {
+.cart-dropdown-menu a {
+    color: var(--text-color);
+    padding: 10px 15px;
+    display: block;
+    font-family: var(--default-font);
+}
+
+.cart-dropdown-menu a:hover {
+    background-color: var(--light-grey);
+}
+
+.cart-dropdown-menu.show {
+    display: block;
+}
+
+/* Navigasi Kanan (Menu Dropdown) */
+.main-nav {
+    display: none; 
     padding: 15px 0;
-    border-bottom: 1px solid var(--light-grey);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sidebar-section h3 {
+.main-nav.show {
+    display: block;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
+    font-family: var(--default-font);
+}
+
+.category-links, .contact-info-menu {
+    margin-bottom: 15px;
+}
+
+.category-links a, .contact-info-menu a {
+    display: block;
+    padding: 5px 0;
+    color: var(--white);
+}
+
+.contact-info-menu i {
+    margin-right: 8px;
+}
+
+.soon {
+    font-style: italic;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* 2. PEMISAH GARIS TEBAL HIJAU BOTOL */
+.separator-line {
+    border: none;
+    border-top: 4px solid var(--green-bottle); /* Garis Tebal */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. WELCOME SECTION (Background Putih) */
+.welcome-section {
+    padding: 20px;
+    text-align: center;
     color: var(--green-bottle);
+}
+
+.welcome-title {
+    font-family: var(--soft-font);
+    font-weight: 700; /* Bold */
+    font-size: 1.6em;
     margin-bottom: 10px;
 }
 
-.sidebar-section a {
-    display: block;
-    padding: 8px 0;
+.welcome-description {
+    font-size: 0.95em;
     color: var(--text-color);
 }
 
-.sidebar-section a i {
-    margin-right: 10px;
-    color: var(--green-bottle);
-}
-
-.search-section {
-    position: relative;
-}
-
-.search-section input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-
-.search-section i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-color);
-    cursor: pointer;
-}
-
-/* --- 3. WELCOME SECTION --- */
-.welcome-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--white);
-}
-
-.bold-text {
-    font-weight: bold;
-    color: var(--green-bottle);
-    margin-top: 15px;
-}
-
-/* --- 4. SLIDER BANNER --- */
+/* 4. SLIDER BANNER (Mobile Friendly) */
 .slider-section {
     overflow: hidden;
-    position: relative;
+    /* Atur tinggi slider agar proporsional di HP */
+    max-height: 250px; 
 }
 
 .slide-container {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Untuk efek geser */
-    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    min-width: 100%; /* Penting untuk Slider */
-}
-
-.slide img {
     width: 100%;
-    height: 350px; /* Tinggi Slider (Bisa disesuaikan) */
-    object-fit: cover;
+    height: 250px; 
+    object-fit: cover; /* Penting agar gambar tidak terdistorsi */
+    flex-shrink: 0;
 }
 
-/* --- 5. GARIS PEMBATAS TEBAL HIJAU BOTOL --- */
-.divider {
-    height: 10px;
-    background-color: var(--green-bottle);
-    margin: 30px 0;
-}
-
-/* --- 6. PRODUK WANITA SECTION --- */
+/* 5. PRODUCT SECTION */
 .product-section {
     padding: 20px;
+}
+
+.product-header {
+    font-family: var(--soft-font);
     text-align: center;
-    background-color: var(--white);
     color: var(--green-bottle);
+    margin-bottom: 5px;
+    font-size: 1.4em;
 }
 
-.product-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.product-title {
-    font-size: 1.2em;
-    font-weight: bold;
+.product-subtitle {
+    font-family: var(--soft-font);
+    text-align: center;
+    color: var(--text-color);
     margin-bottom: 20px;
+    font-size: 1.1em;
 }
 
+/* Product Image Slider (6 Gambar digeser horizontal) */
 .product-image-slider {
     display: flex;
-    overflow-x: scroll; /* Menggeser horizontal di HP */
+    overflow-x: scroll; 
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px; 
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 25px;
 }
 
 .product-image-slider img {
-    min-width: 150px; /* Ukuran foto produk di slide */
-    width: 150px;
+    width: 150px; 
     height: 200px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 5px;
+    flex-shrink: 0;
 }
 
-/* --- 7. FOOTER CONTACT SECTION (Hijau Botol) --- */
-.footer-contact-section {
+/* Keterangan Produk (Rata Kiri Rapi) */
+.product-text-details {
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.product-text-details p, .product-text-details ul {
+    text-align: left; /* Rata Kiri */
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.size-detail {
+    margin-top: 10px !important;
+}
+
+.tagline {
+    margin-top: 15px !important;
+}
+
+.tagline-quote {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--green-bottle);
+}
+
+/* Panduan Ukuran */
+.size-guide-title {
+    color: var(--green-bottle);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.size-guide-img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* 6. FOOTER STYLING (Hijau Botol, Tulisan Putih, RATA KIRI RAPI) */
+.main-footer {
     background-color: var(--green-bottle);
     color: var(--white);
-    padding: 40px 20px 20px;
-    text-align: center;
+    padding: 25px 20px;
+    text-align: left; /* Rata Kiri Total Footer */
 }
 
-.footer-contact-section p {
-    margin-bottom: 20px;
-}
-
+/* Ikon Marketplace */
 .marketplace-links {
     display: flex;
-    justify-content: center;
     gap: 25px;
     margin-bottom: 20px;
 }
 
-.marketplace-links img {
-    width: 40px;
-    height: 40px;
-    background-color: var(--white); /* Agar ikon marketplace terlihat jelas */
-    border-radius: 50%;
-    padding: 5px;
-    object-fit: contain;
-}
-
-.contact-info-footer a {
+.marketplace-icon {
+    width: 130px; /* Ukuran Ikon Marketplace (Lumayan Besar) */
+    height: auto;
     display: block;
-    margin-bottom: 8px;
-    font-size: 1em;
+    background: none; /* Pastikan tidak ada background putih */
 }
 
-.contact-info-footer i {
+.footer-note {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.footer-contact, .footer-address {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.footer-contact p, .footer-address p {
+    margin-bottom: 5px;
+}
+
+.footer-contact i {
     margin-right: 5px;
 }
 
-.copyright {
-    margin-top: 30px;
+.copyright-text {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
     font-size: 0.8em;
-} 
-
-.slider-section {
-  height: 500px; /* Atur tinggi default di sini. Sesuaikan jika di HTML lo berbeda */
-  width: 100%;
 }
-
-/* ⬇️ MEDIA QUERY: KHUSUS LAYAR HP (Maksimal 600px Lebar) ⬇️ */
-@media (max-width: 600px) {
-  /* Di sini lo Timpa tinggi, hanya untuk layar HP */
-  .slider-section {
-    height: 300px; /* Lo bisa coba ganti angka ini: 250px atau 300px agar pendek */
-  }
-} 
-
-    /* 1. Rata Kiri Konten Footer dan Atur Padding */
-/* Ganti .footer dengan class footer lo yang benar */
-.footer {
-  text-align: left; /* Ini yang membuat semua teks rata kiri */
-  padding: 30px 20px; /* Tambah padding agar tidak terlalu mepet ke kiri/kanan layar */
-}
-
-.footer p {
-  margin-bottom: 10px; /* Jarak antar baris teks */
-}
-
-/* 2. Styling Khusus untuk Ikon Marketplace (Shopee & TikTok) */
-.social-icons {
-  display: flex; /* Agar ikon berjejer horizontal */
-  gap: 15px; /* Jarak antar ikon */
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-#shopee-icon, #tiktok-icon {
-  font-size: 30px; /* Perbesar ukuran ikon */
-  color: var(--white); /* Gunakan warna putih agar tidak ada dasar putih */
-  background: none; /* Pastikan tidak ada background */
-  padding: 0; /* Hapus padding yang membuat lingkaran putih */
-}
-
-/* 3. Styling Alamat Baru */
-.address-info {
-  margin-top: 20px;
-  font-size: 14px;
-} 
-
-    /* Styling FOOTER BARU (Di bagian paling akhir style.css) */
-
-.footer { /* Pastikan nama class ini BENAR (atau ganti jika nama class lo beda) */
-  text-align: left !important; /* <--- Tambahkan !important agar pasti menimpa styling lama */
-  padding: 30px 20px; 
-} 
