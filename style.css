@@ -316,3 +316,10 @@ a {
   margin-top: 20px;
   font-size: 14px;
 } 
+
+    /* Styling FOOTER BARU (Di bagian paling akhir style.css) */
+
+.footer { /* Pastikan nama class ini BENAR (atau ganti jika nama class lo beda) */
+  text-align: left !important; /* <--- Tambahkan !important agar pasti menimpa styling lama */
+  padding: 30px 20px; 
+} 
