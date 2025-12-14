@@ -284,5 +284,20 @@ a {
 
     .sidebar.open {
         width: 350px;
-    }
+
+    } 
         }
+
+    /* Aturan default untuk desktop */
+.slider-section {
+  height: 500px; /* Atur tinggi default di sini. Sesuaikan jika di HTML lo berbeda */
+  width: 100%;
+}
+
+/* ⬇️ MEDIA QUERY: KHUSUS LAYAR HP (Maksimal 600px Lebar) ⬇️ */
+@media (max-width: 600px) {
+  /* Di sini lo Timpa tinggi, hanya untuk layar HP */
+  .slider-section {
+    height: 300px; /* Lo bisa coba ganti angka ini: 250px atau 300px agar pendek */
+  }
+}
